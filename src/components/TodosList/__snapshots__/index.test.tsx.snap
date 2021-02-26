@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TosdosList /> TodosList snapshot matches 1`] = `
+<ul
+  className="sc-gKsewC iVAJSz"
+>
+  <li
+    className="sc-gsTCUz kHrTBI"
+  >
+    <button
+      className="sc-bdfBwQ sc-dlfnbm jIvAUB ksHEbo"
+      onClick={[Function]}
+    >
+      <span
+        className="sc-eCssSg glwnAj"
+      />
+    </button>
+    <p
+      className="sc-hKgILt eNHMqi"
+    >
+      Go to the supermarket
+    </p>
+    <button
+      className="sc-bdfBwQ sc-jSgupP jIvAUB dtSVeq"
+      onClick={[Function]}
+    >
+      X
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz fEkioF"
+  >
+    <button
+      className="sc-bdfBwQ sc-dlfnbm jIvAUB ksHEbo"
+      onClick={[Function]}
+    >
+      ✅
+    </button>
+    <p
+      className="sc-hKgILt eNHMqi"
+    >
+      Call Alice
+    </p>
+    <button
+      className="sc-bdfBwQ sc-jSgupP jIvAUB dtSVeq"
+      onClick={[Function]}
+    >
+      X
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz kHrTBI"
+  >
+    <button
+      className="sc-bdfBwQ sc-dlfnbm jIvAUB ksHEbo"
+      onClick={[Function]}
+    >
+      <span
+        className="sc-eCssSg glwnAj"
+      />
+    </button>
+    <p
+      className="sc-hKgILt eNHMqi"
+    >
+      Ask Alice to call Bob
+    </p>
+    <button
+      className="sc-bdfBwQ sc-jSgupP jIvAUB dtSVeq"
+      onClick={[Function]}
+    >
+      X
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz fEkioF"
+  >
+    <button
+      className="sc-bdfBwQ sc-dlfnbm jIvAUB ksHEbo"
+      onClick={[Function]}
+    >
+      ✅
+    </button>
+    <p
+      className="sc-hKgILt eNHMqi"
+    >
+      Do the dishes
+    </p>
+    <button
+      className="sc-bdfBwQ sc-jSgupP jIvAUB dtSVeq"
+      onClick={[Function]}
+    >
+      X
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz kHrTBI"
+  >
+    <button
+      className="sc-bdfBwQ sc-dlfnbm jIvAUB ksHEbo"
+      onClick={[Function]}
+    >
+      <span
+        className="sc-eCssSg glwnAj"
+      />
+    </button>
+    <p
+      className="sc-hKgILt eNHMqi"
+    >
+      Change car tyres
+    </p>
+    <button
+      className="sc-bdfBwQ sc-jSgupP jIvAUB dtSVeq"
+      onClick={[Function]}
+    >
+      X
+    </button>
+  </li>
+</ul>
+`;
