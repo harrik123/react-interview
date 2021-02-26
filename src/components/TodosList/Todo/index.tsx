@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { ITodoProps } from "../../ts/intefaces";
-import Button from "../Button";
+import { ITodoProps } from "../../../ts/intefaces";
+import Button from "../../Button";
 
 const Li = styled.li<{ complete: boolean }>`
   display: grid;
