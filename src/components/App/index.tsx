@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import GlobalStyle from "../../global-styles";
 import { ITodoItem } from "../../ts/intefaces";
 import Bar from "../Bar";
 import Hello from "../Hello";
-import "./App.css";
 
 const initTodos: ITodoItem[] = [
   { id: 1, name: "Go to the supermarket", complete: false },
@@ -72,14 +72,17 @@ function App() {
   };
 
   return (
-    <div className="">
-      {todoItems()}
-      <Bar
-        onSubmit={onSubmit}
-        newTodoName={newTodoName}
-        onInputChange={onChange}
-      />
-    </div>
+    <>
+      <div className="">
+        {todoItems()}
+        <Bar
+          onSubmit={onSubmit}
+          newTodoName={newTodoName}
+          onInputChange={onChange}
+        />
+      </div>
+      <GlobalStyle />
+    </>
   );
 }
 
