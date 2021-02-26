@@ -36,7 +36,7 @@ function InputBar(props: IInputBarProps) {
         onChange={onInputChange}
       />
       <SubmitButton type="submit" value="Submit">
-        Submit
+        {props.submitButtonText}
       </SubmitButton>
     </Form>
   );

@@ -1,3 +1,15 @@
+import { ReactNode } from "react";
+
+export interface ILanguageContextProps {
+  children: ReactNode;
+}
+
+export interface ILanguageContext {
+  currentLanguage: string;
+  translations: { [key: string]: any };
+  changeLanguage: Function;
+}
+
 export interface ITodoItem {
   id: number;
   name: string;
@@ -18,5 +30,6 @@ export interface ITodoProps {
 
 export interface IInputBarProps {
   placeholder: string;
+  submitButtonText: string;
   onSubmit: Function;
 }

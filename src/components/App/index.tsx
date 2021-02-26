@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useLanguage } from "../../contexts/LanguageContext";
 import GlobalStyle from "../../global-styles";
 import { ITodoItem } from "../../ts/intefaces";
+import Header from "../Header";
 import InputBar from "../InputBar";
 import TodosList from "../TodosList";
 
@@ -13,6 +15,7 @@ const initTodos: ITodoItem[] = [
 ];
 
 function App() {
+  const { translations } = useLanguage();
   const [todos, setTodos] = useState(initTodos);
 
   const generateNewId = () => {
@@ -43,12 +46,17 @@ function App() {
 
   return (
     <>
+      <Header />
       <TodosList
         todos={todos}
         onStatusChangeClick={handleStatusChange}
         onRemoveClick={handleRemoveTodo}
       />
-      <InputBar placeholder={"Add new todo"} onSubmit={handleAddTodo} />
+      <InputBar
+        placeholder={translations.inputBar.placeholder}
+        submitButtonText={translations.inputBar.submitButton}
+        onSubmit={handleAddTodo}
+      />
       <GlobalStyle />
     </>
   );

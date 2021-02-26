@@ -1,0 +1,6 @@
+{
+  "inputBar": {
+    "placeholder": "Add new todo",
+    "submitButton": "Add"
+  }
+}

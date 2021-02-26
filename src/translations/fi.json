@@ -1,0 +1,6 @@
+{
+  "inputBar": {
+    "placeholder": "Lisää uusi todo",
+    "submitButton": "Lisää"
+  }
+}
