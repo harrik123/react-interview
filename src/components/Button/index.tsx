@@ -5,7 +5,8 @@ const Button = styled.button`
   border: none;
   color: white;
   padding: 12px 16px;
-  font-size: 16px;
+  font-size: 1em;
+  font-weight: bold;
   cursor: pointer;
 `;
 
