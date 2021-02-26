@@ -19,7 +19,15 @@ function App() {
   const [todos, setTodos] = useState(initTodos);
 
   const generateNewId = () => {
-    return todos.length + 1;
+    let maxId = 0;
+
+    todos.forEach((item) => {
+      if (item.id > maxId) {
+        maxId = item.id;
+      }
+    });
+
+    return maxId + 1;
   };
 
   const handleAddTodo = (newTodoName: string) => {
