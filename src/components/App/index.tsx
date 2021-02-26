@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import GlobalStyle from "../../global-styles";
 import { ITodoItem } from "../../ts/intefaces";
 import Bar from "../Bar";
-import Hello from "../Hello";
+import TodosList from "../TodosList";
 
 const initTodos: ITodoItem[] = [
   { id: 1, name: "Go to the supermarket", complete: false },
@@ -54,27 +54,15 @@ function App() {
     console.log("Remove Item!");
   };
 
-  const todoItems = () => {
-    var retVal = [];
-
-    for (let i = 0; i < todos.length; i++) {
-      var todo: ITodoItem = todos[i];
-      retVal.push(
-        <Hello
-          key={todo.id}
-          todo={todo}
-          onClick={onClick}
-          onRemoveClick={onRemoveClick}
-        />
-      );
-    }
-    return retVal;
-  };
-
   return (
     <>
       <div className="">
-        {todoItems()}
+        <TodosList
+          todos={todos}
+          onClick={onClick}
+          onRemoveClick={onRemoveClick}
+        />
+
         <Bar
           onSubmit={onSubmit}
           newTodoName={newTodoName}

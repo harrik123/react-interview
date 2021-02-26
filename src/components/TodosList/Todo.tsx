@@ -1,6 +1,16 @@
 import React from "react";
+import styled from "styled-components";
 
-function Hello(props: any) {
+const Li = styled.li<{ backgroundColor: string }>`
+  padding: 5px 15px;
+  display: grid;
+  grid-template-columns: 5fr 2fr 1fr;
+  border: solid 1px;
+  margin-bottom: 2px;
+  background-color: ${(props) => props.backgroundColor};
+`;
+
+function Todo(props: any) {
   let color: string;
   let text: string;
 
@@ -13,8 +23,8 @@ function Hello(props: any) {
   }
 
   return (
-    <div className="wrapper" style={{ backgroundColor: color }}>
-      <h3>{props.todo.name}</h3>
+    <Li backgroundColor={color}>
+      <p>{props.todo.name}</p>
       <button className="btn" onClick={() => props.onClick(props.todo.id)}>
         {text}
       </button>
@@ -24,8 +34,8 @@ function Hello(props: any) {
       >
         Remove from list
       </button>
-    </div>
+    </Li>
   );
 }
 
-export default Hello;
+export default Todo;

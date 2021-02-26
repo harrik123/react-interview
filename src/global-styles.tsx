@@ -24,21 +24,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
   }
-
-  h1, h3 {
-    text-align: center;
-  }
-  
-  .wrapper {
-    display: grid;
-    grid-template-columns:  5fr 2fr 1fr;
-    border: solid 1px;
-    margin-bottom: 2px;
-  }
-  
-  .complete {
-    color: #c4c4c4 
-  }
   
   .btn {
     background-color: #444;
