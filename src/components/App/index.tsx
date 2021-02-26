@@ -1,4 +1,6 @@
 import React from "react";
+import Bar from "../Bar";
+import Hello from "../Hello";
 import "./App.css";
 
 const todos: any = [
@@ -86,60 +88,6 @@ class App extends React.Component<any, any> {
     }
     return retVal;
   };
-}
-
-class Hello extends React.Component<any, any> {
-  render() {
-    var color;
-    var text;
-
-    if (this.props.todo.complete === true) {
-      color = "lightgreen";
-      text = "Complete";
-    } else {
-      color = "pink";
-      text = "Incomplete";
-    }
-
-    return (
-      <div className="wrapper" style={{ backgroundColor: color }}>
-        <h3>{this.props.todo.name}</h3>
-        <button
-          className="btn"
-          onClick={() => this.props.onClick(this.props.todo.id)}
-        >
-          {text}
-        </button>
-        <button
-          className="btn"
-          onClick={() => this.props.onRemoveClick(this.props.todo.id)}
-        >
-          Remove from list
-        </button>
-      </div>
-    );
-  }
-}
-
-class Bar extends React.Component<any, any> {
-  render() {
-    return (
-      <form
-        className="wrapper"
-        style={{ "grid-template-columns": "7fr 2fr" } as React.CSSProperties}
-        onSubmit={this.props.onSubmit}
-      >
-        <input
-          placeholder="Add new todo"
-          value={this.props.newTodoName}
-          onChange={this.props.onInputChange}
-        />
-        <button className="btn btn-success" type="submit" value="Submit">
-          Submit
-        </button>
-      </form>
-    );
-  }
 }
 
 export default App;
