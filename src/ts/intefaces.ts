@@ -3,3 +3,20 @@ export interface ITodoItem {
   name: string;
   complete: boolean;
 }
+
+export interface ITodosListProps {
+  todos: ITodoItem[];
+  onStatusChangeClick: Function;
+  onRemoveClick: Function;
+}
+
+export interface ITodoProps {
+  todo: ITodoItem;
+  onStatusChangeClick: Function;
+  onRemoveClick: Function;
+}
+
+export interface IInputBarProps {
+  placeholder: string;
+  onSubmit: Function;
+}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { IInputBarProps } from "../../ts/intefaces";
 import Button from "../Button";
 
 const Form = styled.form`
@@ -11,7 +12,7 @@ const SubmitButton = styled(Button)`
   background-color: green;
 `;
 
-function InputBar(props: any) {
+function InputBar(props: IInputBarProps) {
   const [inputText, setInputText] = useState("");
 
   const onInputChange = (event: React.FormEvent<HTMLInputElement>) => {

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ITodoItem } from "../../ts/intefaces";
+import { ITodoItem, ITodosListProps } from "../../ts/intefaces";
 import Todo from "./Todo";
 
 const Ul = styled.ul`
@@ -9,7 +9,7 @@ const Ul = styled.ul`
   margin: 0;
 `;
 
-function TodosList(props: any) {
+function TodosList(props: ITodosListProps) {
   return (
     <Ul>
       {props.todos.map((todo: ITodoItem) => {
