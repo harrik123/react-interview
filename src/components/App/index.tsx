@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Bar from "../Bar";
 import Hello from "../Hello";
 import "./App.css";
 
-const todos: any = [
+const initTodos: any = [
   { id: 1, name: "Go to the supermarket", complete: false },
   { id: 2, name: "Call Alice", complete: false },
   { id: 3, name: "Ask Alice to call Bob", complete: false },
@@ -11,83 +11,75 @@ const todos: any = [
   { id: 5, name: "Change car tyres", complete: false },
 ];
 
-class App extends React.Component<any, any> {
-  constructor(props: any) {
-    super(props);
-    this.state = {
-      newTodoName: "",
-      todos: todos,
-    };
-  }
+function App() {
+  const [todos, setTodos] = useState(initTodos);
+  const [newTodoName, setNewTodoName] = useState("");
 
-  generateNewId() {
-    return this.state.todos.length + 1;
-  }
+  const generateNewId = () => {
+    return todos.length + 1;
+  };
 
-  onSubmit(event: any) {
+  const onSubmit = (event: any) => {
     event.preventDefault();
 
-    var newTodos = this.state.todos.slice();
-    newTodos.push({
-      id: this.generateNewId(),
-      name: this.state.newTodoName,
+    const newItem = {
+      id: generateNewId(),
+      name: newTodoName,
       complete: false,
-    });
+    };
 
-    this.setState({ todos: newTodos, newTodoName: "" });
-  }
+    setTodos([...todos, newItem]);
+    setNewTodoName("");
+  };
 
-  onClick(id: any) {
-    var todoItems = this.state.todos.slice();
-    for (let i = 0; i < this.state.todos.length; i++) {
+  const onClick = (id: any) => {
+    var todoItems = todos.slice();
+    for (let i = 0; i < todos.length; i++) {
       if (todoItems[i].id === id) {
         var newComplete = !todoItems[i].complete;
         todoItems[i].complete = newComplete;
       }
     }
 
-    this.setState({
-      todos: todoItems,
-    });
-  }
+    setTodos(todoItems);
+  };
 
-  onChange(event: any) {
-    this.setState({ newTodoName: event.target.value });
-  }
-  onRemoveClick(id: any) {
+  const onChange = (event: any) => {
+    setNewTodoName(event.target.value);
+  };
+
+  const onRemoveClick = (id: any) => {
     //implement this logic
     console.log("Remove Item!");
-  }
+  };
 
-  render() {
-    return (
-      <div className="">
-        {this.todoItems()}
-        <Bar
-          onSubmit={this.onSubmit.bind(this)}
-          newTodoName={this.state.newTodoName}
-          onInputChange={this.onChange.bind(this)}
-        />
-      </div>
-    );
-  }
-
-  todoItems = () => {
+  const todoItems = () => {
     var retVal = [];
 
-    for (let i = 0; i < this.state.todos.length; i++) {
-      var todo = this.state.todos[i];
+    for (let i = 0; i < todos.length; i++) {
+      var todo = todos[i];
       retVal.push(
         <Hello
           key={todo.id}
           todo={todo}
-          onClick={this.onClick.bind(this)}
-          onRemoveClick={this.onRemoveClick.bind(this)}
+          onClick={onClick}
+          onRemoveClick={onRemoveClick}
         />
       );
     }
     return retVal;
   };
+
+  return (
+    <div className="">
+      {todoItems()}
+      <Bar
+        onSubmit={onSubmit}
+        newTodoName={newTodoName}
+        onInputChange={onChange}
+      />
+    </div>
+  );
 }
 
 export default App;
