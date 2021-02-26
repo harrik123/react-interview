@@ -1,8 +1,8 @@
 import React from "react";
 
 function Hello(props: any) {
-  let color;
-  let text;
+  let color: string;
+  let text: string;
 
   if (props.todo.complete === true) {
     color = "lightgreen";

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { ITodoItem } from "../../ts/intefaces";
 import Bar from "../Bar";
 import Hello from "../Hello";
 import "./App.css";
 
-const initTodos: any = [
+const initTodos: ITodoItem[] = [
   { id: 1, name: "Go to the supermarket", complete: false },
   { id: 2, name: "Call Alice", complete: false },
   { id: 3, name: "Ask Alice to call Bob", complete: false },
@@ -19,10 +20,10 @@ function App() {
     return todos.length + 1;
   };
 
-  const onSubmit = (event: any) => {
+  const onSubmit = (event: React.SyntheticEvent) => {
     event.preventDefault();
 
-    const newItem = {
+    const newItem: ITodoItem = {
       id: generateNewId(),
       name: newTodoName,
       complete: false,
@@ -32,7 +33,7 @@ function App() {
     setNewTodoName("");
   };
 
-  const onClick = (id: any) => {
+  const onClick = (id: number) => {
     var todoItems = todos.slice();
     for (let i = 0; i < todos.length; i++) {
       if (todoItems[i].id === id) {
@@ -44,11 +45,11 @@ function App() {
     setTodos(todoItems);
   };
 
-  const onChange = (event: any) => {
-    setNewTodoName(event.target.value);
+  const onChange = (event: React.FormEvent<HTMLInputElement>) => {
+    setNewTodoName(event.currentTarget.value);
   };
 
-  const onRemoveClick = (id: any) => {
+  const onRemoveClick = (id: number) => {
     //implement this logic
     console.log("Remove Item!");
   };
@@ -57,7 +58,7 @@ function App() {
     var retVal = [];
 
     for (let i = 0; i < todos.length; i++) {
-      var todo = todos[i];
+      var todo: ITodoItem = todos[i];
       retVal.push(
         <Hello
           key={todo.id}
