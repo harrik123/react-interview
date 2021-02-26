@@ -29,34 +29,26 @@ function App() {
     setTodos([...todos, newItem]);
   };
 
-  const onClick = (id: number) => {
-    var todoItems = todos.slice();
-    for (let i = 0; i < todos.length; i++) {
-      if (todoItems[i].id === id) {
-        var newComplete = !todoItems[i].complete;
-        todoItems[i].complete = newComplete;
-      }
-    }
-
-    setTodos(todoItems);
+  const handleStatusChange = (id: number) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, complete: !todo.complete } : todo
+      )
+    );
   };
 
-  const onRemoveClick = (id: number) => {
-    //implement this logic
-    console.log("Remove Item!");
+  const handleRemoveTodo = (id: number) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
   };
 
   return (
     <>
-      <div className="">
-        <TodosList
-          todos={todos}
-          onClick={onClick}
-          onRemoveClick={onRemoveClick}
-        />
-
-        <InputBar placeholder={"Add new todo"} onSubmit={handleAddTodo} />
-      </div>
+      <TodosList
+        todos={todos}
+        onStatusChangeClick={handleStatusChange}
+        onRemoveClick={handleRemoveTodo}
+      />
+      <InputBar placeholder={"Add new todo"} onSubmit={handleAddTodo} />
       <GlobalStyle />
     </>
   );

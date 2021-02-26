@@ -25,7 +25,10 @@ function Todo(props: any) {
   return (
     <Li backgroundColor={color}>
       <p>{props.todo.name}</p>
-      <button className="btn" onClick={() => props.onClick(props.todo.id)}>
+      <button
+        className="btn"
+        onClick={() => props.onStatusChangeClick(props.todo.id)}
+      >
         {text}
       </button>
       <button

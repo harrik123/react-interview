@@ -17,7 +17,7 @@ function TodosList(props: any) {
           <Todo
             key={todo.id}
             todo={todo}
-            onClick={props.onClick}
+            onStatusChangeClick={props.onStatusChangeClick}
             onRemoveClick={props.onRemoveClick}
           />
         );
