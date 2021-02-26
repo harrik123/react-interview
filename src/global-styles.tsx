@@ -24,25 +24,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
   }
-  
-  .btn {
-    background-color: #444;
-    border: none; 
-    color: white;
-    padding: 12px 16px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-left: 1px;
-  }
-  
-  .btn-complete {
-    background-color: #c4c4c4;
-    color: white; 
-  }
-  
-  .btn-success {
-    background-color: green;
-  }
 `;
 
 export default GlobalStyle;

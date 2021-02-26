@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import GlobalStyle from "../../global-styles";
 import { ITodoItem } from "../../ts/intefaces";
-import Bar from "../Bar";
+import InputBar from "../InputBar";
 import TodosList from "../TodosList";
 
 const initTodos: ITodoItem[] = [
@@ -14,15 +14,12 @@ const initTodos: ITodoItem[] = [
 
 function App() {
   const [todos, setTodos] = useState(initTodos);
-  const [newTodoName, setNewTodoName] = useState("");
 
   const generateNewId = () => {
     return todos.length + 1;
   };
 
-  const onSubmit = (event: React.SyntheticEvent) => {
-    event.preventDefault();
-
+  const handleAddTodo = (newTodoName: string) => {
     const newItem: ITodoItem = {
       id: generateNewId(),
       name: newTodoName,
@@ -30,7 +27,6 @@ function App() {
     };
 
     setTodos([...todos, newItem]);
-    setNewTodoName("");
   };
 
   const onClick = (id: number) => {
@@ -43,10 +39,6 @@ function App() {
     }
 
     setTodos(todoItems);
-  };
-
-  const onChange = (event: React.FormEvent<HTMLInputElement>) => {
-    setNewTodoName(event.currentTarget.value);
   };
 
   const onRemoveClick = (id: number) => {
@@ -63,11 +55,7 @@ function App() {
           onRemoveClick={onRemoveClick}
         />
 
-        <Bar
-          onSubmit={onSubmit}
-          newTodoName={newTodoName}
-          onInputChange={onChange}
-        />
+        <InputBar placeholder={"Add new todo"} onSubmit={handleAddTodo} />
       </div>
       <GlobalStyle />
     </>
