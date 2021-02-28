@@ -13,21 +13,17 @@ const Li = styled.li<{ complete: boolean }>`
   color: #fff;
 `;
 
-const StatusButton = styled(Button)`
+const StatusButton = styled(Button)<{ complete: boolean }>`
   padding: 0;
-  background-color: transparent;
+  background-color: ${(props) => (props.complete ? "transparent" : "#fff")};
+  color: #fff;
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
 `;
 
 const Name = styled.p`
   margin: 0 15px;
-`;
-
-const Incomplete = styled.span`
-  display: inline-block;
-  height: 1rem;
-  width: 1rem;
-  border-radius: 50%;
-  background-color: #fff;
 `;
 
 const RemoveButton = styled(Button)`
@@ -43,8 +39,11 @@ const RemoveButton = styled(Button)`
 function Todo(props: ITodoProps) {
   return (
     <Li complete={props.todo.complete}>
-      <StatusButton onClick={() => props.onStatusChangeClick(props.todo.id)}>
-        {props.todo.complete ? "✅" : <Incomplete></Incomplete>}
+      <StatusButton
+        complete={props.todo.complete}
+        onClick={() => props.onStatusChangeClick(props.todo.id)}
+      >
+        {props.todo.complete ? "✓" : ""}
       </StatusButton>
       <Name>{props.todo.name}</Name>
       <RemoveButton onClick={() => props.onRemoveClick(props.todo.id)}>

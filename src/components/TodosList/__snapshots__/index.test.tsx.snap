@@ -2,18 +2,16 @@
 
 exports[`<TosdosList /> TodosList snapshot matches 1`] = `
 <ul
-  className="sc-gKsewC iVAJSz"
+  className="sc-jSgupP ivZiTy"
 >
   <li
     className="sc-gsTCUz kHrTBI"
   >
     <button
-      className="sc-bdfBwQ sc-dlfnbm jIvAUB ksHEbo"
+      className="sc-bdfBwQ sc-dlfnbm jIvAUB gejJAc"
       onClick={[Function]}
     >
-      <span
-        className="sc-eCssSg glwnAj"
-      />
+      
     </button>
     <p
       className="sc-hKgILt eNHMqi"
@@ -21,7 +19,7 @@ exports[`<TosdosList /> TodosList snapshot matches 1`] = `
       Go to the supermarket
     </p>
     <button
-      className="sc-bdfBwQ sc-jSgupP jIvAUB dtSVeq"
+      className="sc-bdfBwQ sc-eCssSg jIvAUB dJoaAH"
       onClick={[Function]}
     >
       X
@@ -31,10 +29,10 @@ exports[`<TosdosList /> TodosList snapshot matches 1`] = `
     className="sc-gsTCUz fEkioF"
   >
     <button
-      className="sc-bdfBwQ sc-dlfnbm jIvAUB ksHEbo"
+      className="sc-bdfBwQ sc-dlfnbm jIvAUB ipRYBD"
       onClick={[Function]}
     >
-      ✅
+      ✓
     </button>
     <p
       className="sc-hKgILt eNHMqi"
@@ -42,7 +40,7 @@ exports[`<TosdosList /> TodosList snapshot matches 1`] = `
       Call Alice
     </p>
     <button
-      className="sc-bdfBwQ sc-jSgupP jIvAUB dtSVeq"
+      className="sc-bdfBwQ sc-eCssSg jIvAUB dJoaAH"
       onClick={[Function]}
     >
       X
@@ -52,12 +50,10 @@ exports[`<TosdosList /> TodosList snapshot matches 1`] = `
     className="sc-gsTCUz kHrTBI"
   >
     <button
-      className="sc-bdfBwQ sc-dlfnbm jIvAUB ksHEbo"
+      className="sc-bdfBwQ sc-dlfnbm jIvAUB gejJAc"
       onClick={[Function]}
     >
-      <span
-        className="sc-eCssSg glwnAj"
-      />
+      
     </button>
     <p
       className="sc-hKgILt eNHMqi"
@@ -65,7 +61,7 @@ exports[`<TosdosList /> TodosList snapshot matches 1`] = `
       Ask Alice to call Bob
     </p>
     <button
-      className="sc-bdfBwQ sc-jSgupP jIvAUB dtSVeq"
+      className="sc-bdfBwQ sc-eCssSg jIvAUB dJoaAH"
       onClick={[Function]}
     >
       X
@@ -75,10 +71,10 @@ exports[`<TosdosList /> TodosList snapshot matches 1`] = `
     className="sc-gsTCUz fEkioF"
   >
     <button
-      className="sc-bdfBwQ sc-dlfnbm jIvAUB ksHEbo"
+      className="sc-bdfBwQ sc-dlfnbm jIvAUB ipRYBD"
       onClick={[Function]}
     >
-      ✅
+      ✓
     </button>
     <p
       className="sc-hKgILt eNHMqi"
@@ -86,7 +82,7 @@ exports[`<TosdosList /> TodosList snapshot matches 1`] = `
       Do the dishes
     </p>
     <button
-      className="sc-bdfBwQ sc-jSgupP jIvAUB dtSVeq"
+      className="sc-bdfBwQ sc-eCssSg jIvAUB dJoaAH"
       onClick={[Function]}
     >
       X
@@ -96,12 +92,10 @@ exports[`<TosdosList /> TodosList snapshot matches 1`] = `
     className="sc-gsTCUz kHrTBI"
   >
     <button
-      className="sc-bdfBwQ sc-dlfnbm jIvAUB ksHEbo"
+      className="sc-bdfBwQ sc-dlfnbm jIvAUB gejJAc"
       onClick={[Function]}
     >
-      <span
-        className="sc-eCssSg glwnAj"
-      />
+      
     </button>
     <p
       className="sc-hKgILt eNHMqi"
@@ -109,7 +103,7 @@ exports[`<TosdosList /> TodosList snapshot matches 1`] = `
       Change car tyres
     </p>
     <button
-      className="sc-bdfBwQ sc-jSgupP jIvAUB dtSVeq"
+      className="sc-bdfBwQ sc-eCssSg jIvAUB dJoaAH"
       onClick={[Function]}
     >
       X
